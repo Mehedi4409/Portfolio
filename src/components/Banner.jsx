@@ -150,6 +150,7 @@ const Banner = () => {
   return (
     <MotionConfig reducedMotion="user">
       <section
+      id='about'
         ref={sectionRef}
         className="flex min-h-dvh w-full items-center justify-center bg-white px-6 pt-44 pb-16"
       >
