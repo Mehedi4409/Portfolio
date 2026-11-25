@@ -1,31 +1,28 @@
 import React, { useEffect } from 'react'
 import Lenis from 'lenis'
 import './App.css'
-import Navbar from './component/Navbar'
-import Hero from './component/Hero'
-import CTA from './component/HowItWorks'
-import Footer from './component/Footer'
-import Features from './component/Features'
-import HowItWorks from './component/HowItWorks'
-import Pricing from './component/Pricing'
+import Banner from './components/Banner'
+import Navbar from './ui/Navbar'
+import TechStack from './components/TechStack'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Contact from './components/Contact'
+import Footer from './ui/Footer'
 
-// Import your components
-// Adjust the paths based on where you saved the files (e.g., ./components/Navbar)
+
 
 function App() {
-  
+
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      duration: 1.2, // Adjust speed
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing function
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       direction: 'vertical',
       gestureDirection: 'vertical',
       smooth: true,
-      smoothTouch: false, // Default is false, usually better for mobile to stick to native
+      smoothTouch: false,
     })
 
-    // Animation Frame Loop
     function raf(time) {
       lenis.raf(time)
       requestAnimationFrame(raf)
@@ -33,29 +30,24 @@ function App() {
 
     requestAnimationFrame(raf)
 
-    // Cleanup on unmount
     return () => {
       lenis.destroy()
     }
   }, [])
 
   return (
-    // Global wrapper with brand background and selection colors
-    <div className="bg-[#0B1221] min-h-screen text-white ">
-      
-      {/* <Navbar /> */}
-      
-      <main className="relative space-y-32 z-0">
-        <Hero />
-        
-        <Features></Features>
-        <HowItWorks></HowItWorks>
-        <Pricing></Pricing>
-        
+    <div className="bg-white min-h-screen">
+      <Navbar></Navbar>
+      <main className="">
+        <Banner></Banner>
+        <TechStack></TechStack>
+        <Projects></Projects>
+        <Experience></Experience>
+        <Contact></Contact>
+       
       </main>
 
-      <Footer />
-      
+      <Footer></Footer>
     </div>
   )
 }

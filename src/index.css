@@ -7,3 +7,10 @@
 
 /* You can also add the font import here */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+@theme {
+  --font-anton: "Anton", sans-serif;
+  --font-comfortaa: "Comfortaa", cursive;
+  --font-outfit: "Outfit", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}

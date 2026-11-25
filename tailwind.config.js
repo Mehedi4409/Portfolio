@@ -7,14 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        'v-dark': '#0B1221',   
-        'v-sage': '#aec3b0',   
-        'v-orange': '#fb8500', 
+        'v-dark': '#0B1221',
+        'v-sage': '#aec3b0',
+        'v-orange': '#fb8500',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], 
-      }
-    }
+        sans: ['Inter', 'sans-serif'],
+        anton: ['"Anton"', 'sans-serif'],
+        comfortaa: ['"Comfortaa"', 'cursive'],
+        outfit: ['"Outfit"', 'sans-serif'],
+        roboto: ['"Roboto"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
